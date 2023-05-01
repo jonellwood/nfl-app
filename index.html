@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="Description" content="Enter your description here" />
+	<script src="./getWeeksURLList.js"></script>
+	<script src="./getTeams.js"></script>
+	<script src="./getSuperBowl.js"></script>
+	<script src="./getScheduleData.js"></script>
+	<script src="./displayWeeks.js"></script>
+	<script src="./getCurrentWeek.js"></script>
+	<script src="./highlightThisWeek.js"></script>
+	<!-- <script src="./getEventsURLList.js"></script> -->
+	<script src="./displayEvents.js"></script>
+	<title>BCG NFL Pics</title>
+	<script>
+		thisWeek = [];
+
+		function showWeeks(thisWeek) {
+			// console.log('**********************');
+			// console.log(thisWeek[0]);
+		}
+	</script>
+</head>
+
+<body>
+	<div id="container">
+		<h1>Placeholder</h1>
+	</div>
+	<!-- <div id="games-container">
+        <h1>Games Placeholder</h1>
+    </div> -->
+	<div id="dates-container">
+		<h1>Dates Placeholder</h1>
+	</div>
+	<div id="weekHolder">
+		<h1>Weeks by Date</h1>
+		<div id="weeks"></div>
+	</div>
+</body>
+<script>
+	getCurrentWeek(weeks);
+	showWeeks(thisWeek);
+	highlightThisWeek(thisWeek);
+	// getEventsURLList(WeeksURLList);
+	getWeeksURLList();
+
+</script>
+
+</html>
+<style>
+	.team-cards {
+		display: grid;
+		grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+		gap: 1px;
+	}
+
+	.game-cards {
+		display: flex;
+		justify-content: space-between;
+		max-width: 900px;
+		align-items: center;
+	}
+
+	.card {
+		width: 75px;
+		height: 75px;
+		/* background-color: darkgrey; */
+		padding: 1px;
+	}
+
+	.game-card {
+		/* width: 300px; */
+		/* height: 300px; */
+		/* background-color: darkgrey; */
+		padding: 10px;
+	}
+
+	.card h2 {
+		text-align: center;
+		color: whitesmoke;
+		font-size: 10px;
+	}
+
+	input {
+		margin-left: 10px;
+	}
+
+	#weeks {
+		/* display: grid; */
+		/* grid-template-columns: auto auto auto auto auto auto; */
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
+	.week-card {
+		width: 200px;
+		height: 200px;
+		border: 1px solid red;
+		padding: 10px;
+		/* margin-bottom: 10px; */
+	}
+
+	.week-card h3 {
+		text-align: center;
+	}
+
+	.active-week {
+		border: 3px solid red;
+	}
+
+	.hidden {
+		display: none;
+	}
+</style>
